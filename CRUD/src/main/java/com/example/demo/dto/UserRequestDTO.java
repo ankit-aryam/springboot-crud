@@ -22,4 +22,7 @@ public class UserRequestDTO {
 
     @Min(value = 1, message = "Age must be greater than 1")
     private int age;
+
+    private String role;
+    private Boolean active;
 }

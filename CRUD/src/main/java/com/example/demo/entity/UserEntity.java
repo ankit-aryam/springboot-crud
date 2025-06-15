@@ -30,5 +30,11 @@ import lombok.NoArgsConstructor;
         @Min(value = 1, message = "Age must be greater than 1")
         private int age;
 
+        @Column
+        private String role;
+
+        @Column
+        private Boolean active;
+
     }
 
