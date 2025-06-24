@@ -15,20 +15,26 @@ import lombok.NoArgsConstructor;
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
-    @Table(name = "user")
+    @Table(name = "newusers")
     public class UserEntity{
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int id;
 
-        @NotBlank(message = "Name is required")
-        private String name;
+//        @NotBlank(message = "Name is required")
+//        private String name;
 
-        @Email(message = "Email should be valid")
-        private String email;
+//        @Email(message = "Email should be valid")
+//        private String email;
 
-        @Min(value = 1, message = "Age must be greater than 1")
-        private int age;
+//       @Min(value = 1, message = "Age must be greater than 1")
+//        private int age;
+
+        @Column(nullable = false, unique = true)
+        private String username;
+
+        @Column
+        private String password;
 
         @Column
         private String role;

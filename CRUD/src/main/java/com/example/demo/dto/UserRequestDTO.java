@@ -15,13 +15,13 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UserRequestDTO {
     @NotBlank(message = "Name is required")
-    private String name;
+    private String username;
 
-    @Email(message = "Email is required")
-    private String email;
-
-    @Min(value = 1, message = "Age must be greater than 1")
-    private int age;
+//    @Email(message = "Email is required")
+//    private String email;
+//
+//    @Min(value = 1, message = "Age must be greater than 1")
+//    private int age;
 
     private String role;
     private Boolean active;
